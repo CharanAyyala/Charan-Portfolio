@@ -7,6 +7,9 @@
   <title>Charan Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="assets/spidey.png">
+  <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     .skills-grid {
       display: flex;
@@ -112,7 +115,7 @@
 
   <!-- Navigation Bar -->
   <nav class="navbar">
-    <a href="#home" class="logo-container">
+    <a href="#about" class="logo-container">
       <img src="assets/spidey.png" alt="Logo" class="logo-image" />
     </a>
 
@@ -120,7 +123,9 @@
       <li><a class="nav-link" href="#about">About</a></li>
       <li><a class="nav-link" href="#skills">Skills</a></li>
       <li><a class="nav-link" href="#projects">Projects</a></li>
-      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a class="nav-link" href="#education">Education</a></li>
+      <li><a class="nav-link" href="#experience">Experience</a></li>
+      <li><a class="nav-link" href="#testimonials">Testimonials</a></li>
     </ul>
 
     <div class="hamburger" id="hamburger">
@@ -128,21 +133,21 @@
     </div>
   </nav>
   <!-- Hero Section -->
-<section id="home" class="hero">
+<section id="about" class="hero">
   <div class="hero-logo-wrapper">
     <div class="ripple-wrapper">
     <img src="assets/laptop.png" alt="Charan Logo" class="hero-logo" />
-    <span class="ripple-circle delay-0"></span>
-  <span class="ripple-circle delay-1"></span>
-  <span class="ripple-circle delay-2"></span>
-  <span class="ripple-circle delay-3"></span>
-  <span class="ripple-circle delay-4"></span>
+    <span class="rhombus-wave delay-0"></span>
+  <span class="rhombus-wave delay-1"></span>
+  <span class="rhombus-wave delay-2"></span>
+  <span class="rhombus-wave delay-3"></span>
+  <span class="rhombus-wave delay-4"></span>
   </div>
     <a href="assets/Ayyala Hari Naga Sai Charan.pdf" download class="hero-resume-download">Resume</a>
   </div>
 
   <div class="hero-text">
-    <h1>I'm <span class="gradient-text">Hari Naga Sai Charan Ayyala</span></h1>
+    <h1>I'm <span class="Name">Hari Naga Sai Charan Ayyala</span></h1>
     <p>
       A passionate UI/UX Designer and Frontend Developer with strong skills in Python. <br>
       I love building clean, user-friendly interfaces and interactive web experiences. <br>
@@ -156,7 +161,7 @@
 
   <!-- Skills Section -->
   <section id="skills" class="section">
-    <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+    <h2 class="section-title">My <span class="">Skills</span></h2>
     <div class="skills-grid">
 
       <div class="skill-item">
@@ -273,7 +278,7 @@
 
   <!-- Projects Section -->
   <section id="projects" class="section">
-    <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+    <h2 class="section-title">My <span class="">Projects</span></h2>
     <div class="project-grid">
       <div class="project-card">
         <img src="assets/crytpocurrency.png" alt="Crypto Dashboard">
@@ -311,80 +316,261 @@
     </div>
 
   </section>
+  <h2 style="color: #00ffff; text-align: center; font-size: 2.5rem; margin-bottom: 0.5rem;">
+    Education
+  </h2>
+  <section id="education" class="education-section">
+    <!-- Education Header -->
+    <div class="triangle-wrapper">
+      <!-- Gradient Animated Triangle -->
+      <svg class="triangle-svg" viewBox="0 0 300 300">
+        <defs>
+          <linearGradient id="triangleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#00ffff" />
+            <stop offset="100%" stop-color="#ff00ff" />
+          </linearGradient>
+        </defs>
+        <path id="triangle-path" stroke="url(#triangleGradient)" stroke-width="3" fill="none" />
+      </svg>
+
+      <!-- Triangle Buttons -->
+      <div class="vertex" id="vertex-btech">
+        <button onclick="showEducation('btech')">B.Tech</button>
+      </div>
+      <div class="vertex" id="vertex-inter">
+        <button onclick="showEducation('inter')">Intermediate</button>
+      </div>
+      <div class="vertex" id="vertex-ssc">
+        <button onclick="showEducation('ssc')">SSC</button>
+      </div>
+    </div>
+
+    <!-- Fixed Education Content -->
+    <div class="edu-content" id="edu-content">
+      <div class="edu-card" id="btech-card">
+        <h3>Bachelor of Technology - Data Science</h3>
+        <p>NRI Institute of Technology, Agiripalli</p>
+        <p>2022 – 2026</p>
+        <p>Pursuing final year B.Tech. Strong base in DSA, software dev, and web tech.</p>
+      </div>
+      <div class="edu-card" id="inter-card">
+        <h3>Higher Secondary Education</h3>
+        <p>Maruthi Junior College, Nuzvid</p>
+        <p>2020 – 2022</p>
+        <p>Completed MPC. Strong problem-solving foundation. Scored: 82%</p>
+      </div>
+      <div class="edu-card" id="ssc-card">
+        <h3>Secondary Education [SSC]</h3>
+        <p>Siddhartha High School, Nuzvid</p>
+        <p>2019 – 2020</p>
+        <p>Focused on Math, Science, English. Logical & communication base. Scored: 98%</p>
+      </div>
+    </div>
+  </section>
+
 
 <!-- Experience Section -->
-
-
 <section id="experience" class="section experience-section">
-  <h2 class="section-title gradient-text">Experience</h2>
-  <div class="experience-grid">
-    <div class="experience-card delay-0">
-      <h3>WebScrapping Intern</h3>
-      <p class="experience-company">Navodita Infotech · 2024</p>
-      <p class="experience-desc">Developed Automated web scraping tasks using Python and delivered structured data pipelines.</p>
+  <h2 class="section-title">Experience</h2>
+  <div class="experience-carousel">
+    <div class="carousel-track">
+      <div class="timeline-card">
+        <div class="card-content">
+          <h3>WebScrapping Intern</h3>
+          <p class="experience-company">Navodita Infotech · 2024</p>
+          <p class="experience-desc">Developed automated web scraping tasks using Python and delivered structured data pipelines.</p>
+        </div>
+      </div>
+      <div class="timeline-card">
+        <div class="card-content">
+          <h3>UI/UX Designer</h3>
+          <p class="experience-company">MuseMate · Smart India Hackathon</p>
+          <p class="experience-desc">Led UI design for a museum ticketing platform reducing crowd congestion with real-time analytics and smart booking flow.</p>
+        </div>
+      </div>
+      <div class="timeline-card">
+        <div class="card-content">
+          <h3>UI & Chatbot Developer</h3>
+          <p class="experience-company">Shuriken LMS · 2025</p>
+          <p class="experience-desc">UI designer and AI chatbot developer, implemented mock interview features using Figma, React, and Python.</p>
+        </div>
+      </div>
+      <div class="timeline-card">
+        <div class="card-content">
+          <h3>Web Developer Intern</h3>
+          <p class="experience-company">CodSoft · 2024</p>
+          <p class="experience-desc">Created multiple mini-projects including a calculator and responsive websites using HTML, CSS, and JavaScript.</p>
+        </div>
+      </div>
+      <div class="timeline-card">
+        <div class="card-content">
+          <h3>Data Analyst</h3>
+          <p class="experience-company">AICTE Power BI Project</p>
+          <p class="experience-desc">Analyzed energy consumption trends using Power BI, providing insights through interactive dashboards and visual reports.</p>
+        </div>
+      </div>
+      <div class="timeline-card">
+        <div class="card-content">
+          <h3>UI Designer & Strategist</h3>
+          <p class="experience-company">Team Foresighters · 2025</p>
+          <p class="experience-desc">Designed UI and disaster mitigation features for a smart alert system. Helped develop post-disaster suggestions and safety routing tools.</p>
+        </div>
+      </div>
     </div>
-    <div class="experience-card delay-1">
-      <h3>UI/UX Designer</h3>
-      <p class="experience-company">MuseMate Smart India Hackathon</p>
-      <p class="experience-desc">Led UI design for a museum ticketing platform reducing crowd congestion with real-time analytics and smart booking flow.</p>
+    <div class="carousel-dots" id="carouselDots"></div>
+  </div>
+</section>
+
+
+<!-- Testimonials Section -->
+
+<section id="testimonials">
+  <h2 class="section-title"><b>Testimonials</b></h2>
+  <div class="testimonials-container">
+
+    <!-- Card 1 -->
+    <div class="testimonial-card">
+      <img src="https://api.dicebear.com/8.x/bottts/svg?seed=Sripathi" alt="K. Sripathi Rao">
+      <h4>K. Sripathi Rao</h4>
+      <p>"Charan is a visionary developer. Always pushing boundaries!"</p>
     </div>
-    <div class="experience-card delay-2">
-      <h3>UI& Chatbot developer</h3>
-      <p class="experience-company">Shuriken LMS · 2025</p>
-      <p class="experience-desc">Ui designer and , AI chatbot, and mock interview features. Built with Figma,React,Python.</p>
+
+    <!-- Card 2 -->
+    <div class="testimonial-card">
+      <img src="https://api.dicebear.com/8.x/bottts/svg?seed=Revanth" alt="B. Revanth">
+      <h4>B. Revanth</h4>
+      <p>"His UI sense is top-notch. Pleasure to collaborate with him."</p>
     </div>
+
+    <!-- Card 3 -->
+    <div class="testimonial-card">
+      <img src="https://api.dicebear.com/8.x/bottts/svg?seed=Lohith" alt="D. Lohith Sai">
+      <h4>D. Lohith Sai</h4>
+      <p>"Creative, fast, and reliable. Charan makes any idea real."</p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="testimonial-card">
+      <img src="https://api.dicebear.com/8.x/bottts/svg?seed=Hitesh" alt="N. Surya Hitesh">
+      <h4>N. Surya Hitesh</h4>
+      <p>"Charan's passion for design and frontend work is unmatched."</p>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="testimonial-card">
+      <img src="https://api.dicebear.com/8.x/bottts/svg?seed=Jagadeesh" alt="K. Jagadeesh">
+      <h4>K. Jagadeesh</h4>
+      <p>"One of the most dedicated people I’ve worked with."</p>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="testimonial-card">
+      <img src="https://api.dicebear.com/8.x/bottts/svg?seed=Venkatesh" alt="V. Venkateswara Rao">
+      <h4>V. Venkateswara Rao</h4>
+      <p>"Charan’s UI design skills are exceptional. His creativity is top-tier."</p>
+    </div>
+
   </div>
 </section>
 
 
 
 
-  <!-- Testimonials Section -->
-  <section id="testimonials" class="section">
-    <h2 class="section-title"><b>Testimonials</b><span class="gradient-text"></span></h2>
-    <div class="testimonial-grid">
-      <div class="testimonial-card delay-0">
-        <p>"Charan is a visionary developer. Always pushing boundaries!"</p>
-        <h4>— K. Sripathi Rao</h4>
-      </div>
-      <div class="testimonial-card delay-1">
-        <p>"His UI sense is top-notch. Pleasure to collaborate with him."</p>
-        <h4>— B. Revanth</h4>
-      </div>
-      <div class="testimonial-card delay-2">
-        <p>"Creative, fast, and reliable. Charan makes any idea real."</p>
-        <h4>— D. Lohith Sai</h4>
-      </div>
-      <div class="testimonial-card delay-3">
-        <p>"Charan's passion for design and frontend work is unmatched."</p>
-        <h4>— N. Surya Hitesh</h4>
-      </div>
-      <div class="testimonial-card delay-4">
-        <p>"One of the most dedicated people I’ve worked with."</p>
-        <h4>— K. Jagadeesh</h4>
-      </div>
-    </div>
-  </section>
-
-
-
   <!-- Footer -->
-  <footer>
-    <div class="social-icons">
-      <a href="https://github.com/CharanAyyala" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/in/hari-ayyala-99aa342b0" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:charanahn2427@gmail.com"><i class="fas fa-envelope"></i></a>
-    </div>
-    <p>&copy; 2025 Charan Ayyala. All rights reserved.</p>
-  </footer>
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
+<footer>
+  <div class="social-icons">
+    <a href="https://github.com/CharanAyyala" target="_blank" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://linkedin.com/in/hari-ayyala-99aa342b0" target="_blank" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="mailto:charanahn2427@gmail.com" aria-label="Email">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </div>
+</footer>
 
-    hamburger.addEventListener('click', () => {
-      navMenu.classList.toggle('nav-active');
-    });
+<script>
+  // ----------------- TRIANGLE EDUCATION ANIMATION -----------------
+  const trianglePath = document.getElementById("triangle-path");
+  const points = [
+    [150, 0],    // Top
+    [0, 260],    // Left
+    [300, 260],  // Right
+    [150, 0]     // Back to top
+  ];
+  let currentStep = 0;
+
+  function showEducation(level) {
+    currentStep++;
+    const visiblePoints = points.slice(0, currentStep + 1);
+    const pathData = visiblePoints.map((p, i) => `${i === 0 ? "M" : "L"}${p[0]},${p[1]}`).join(" ");
+    trianglePath.setAttribute("d", pathData);
+
+    // Show selected edu-card
+    document.querySelectorAll(".edu-card").forEach(c => c.style.display = "none");
+    document.getElementById(`${level}-card`).style.display = "block";
+  }
+
+  // ----------------- EXPERIENCE CAROUSEL -----------------
+let currentIndex = 0;
+let autoSlideInterval;
+const slideDuration = 4000;
+
+function updateDots() {
+  const dots = document.querySelectorAll('#carouselDots span');
+  dots.forEach((dot, idx) => {
+    dot.classList.toggle('active', idx === currentIndex);
+  });
+}
+
+function createDots() {
+  const cards = document.querySelectorAll('.timeline-card');
+  const dotsContainer = document.getElementById('carouselDots');
+  dotsContainer.innerHTML = '';
+
+  cards.forEach((_, index) => {
+    const dot = document.createElement('span');
+    dot.addEventListener('click', () => moveToSlide(index));
+    dotsContainer.appendChild(dot);
+  });
+
+  updateDots();
+}
+
+function moveToSlide(index) {
+  const track = document.querySelector('.carousel-track');
+  const cardWidth = document.querySelector('.timeline-card').offsetWidth + 40;
+  const cards = document.querySelectorAll('.timeline-card');
+  const maxIndex = cards.length - 1;
+
+  currentIndex = (index + cards.length) % cards.length;
+  track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+  updateDots();
+}
+
+function startAutoSlide() {
+  autoSlideInterval = setInterval(() => {
+    moveToSlide(currentIndex + 1);
+  }, slideDuration);
+}
+
+function stopAutoSlide() {
+  clearInterval(autoSlideInterval);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  createDots();
+  startAutoSlide();
+
+  const carousel = document.querySelector('.experience-carousel');
+  carousel.addEventListener('mouseenter', stopAutoSlide);
+  carousel.addEventListener('mouseleave', startAutoSlide);
+});
+
   </script>
+
 
 </body>
 </html>
