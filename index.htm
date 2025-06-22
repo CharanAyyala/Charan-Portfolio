@@ -7,6 +7,9 @@
   <title>Charan Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="assets/spidey.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Stalinist+One&display=swap" rel="stylesheet">
 
 
   <!-- Font Awesome CDN -->
@@ -174,16 +177,18 @@
  <!-- Fixed Header -->
 <header>
   <nav class="navbar">
-    <a href="#about" class="logo"> <!-- Scrolls to top -->
+    <a href="#about" class="logo">
       <img src="assets/spidey.png" alt="Charan Designs Logo" class="logo-img">
-      <span class="font-bold text-white text-lg"><b>Charan Designs</b></span>
+      <span class="cd"><b>Charan Designs</b></span>
+    </a>
+
 
     </a>
 
     <div class="hamburger" id="hamburger">&#9776;</div>
 
     <ul class="nav-links" id="nav-menu">
-      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#about" class="nav-link"> About</a></li>
       <li><a href="#skills" class="nav-link">Skills</a></li>
       <li><a href="#projects" class="nav-link">Projects</a></li>
       <li><a href="#education" class="nav-link">Education</a></li>
@@ -193,14 +198,6 @@
     </ul>
   </nav>
 </header>
-
-
-
-
-    <div class="hamburger" id="hamburger">
-      <i class="fas fa-bars"></i>
-    </div>
-  </nav>
   <!-- Hero Section -->
 <section id="about" class="hero">
   <div class="hero-logo-wrapper">
@@ -230,7 +227,7 @@
 
   <!-- Skills Section -->
   <section id="skills" class="section">
-    <h2 class="section-title">My <span class="">Skills</span></h2>
+    <h2 class="section-title">My Skills</h2>
     <div class="skills-grid">
 
       <div class="skill-item">
@@ -385,7 +382,8 @@
     </div>
 
   </section>
-  <h2 style="color: #00ffff; text-align: center; font-size: 2.5rem; margin-bottom: 0.5rem;">
+  <h2 style="color: #00ffff; text-align: center; font-size: 2.5rem; margin-bottom: 0.5rem;font-family: 'Poppins', sans-serif;
+  font-weight: 800;         ">
     Education
   </h2>
   <section id="education" class="education-section">
@@ -605,7 +603,18 @@
   </div>
 </section>
 
-
+<!-- maps -->
+<section id="location" class="map-section">
+  <h2>My Location</h2>
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.654798183782!2d80.62913717592695!3d16.50617402731895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35fab99bb8f13f%3A0xf36cfab687a69942!2sVijayawada%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1719053500000!5m2!1sen!2sin"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
 
 
 <!-- Contact CTA Section -->
@@ -632,8 +641,6 @@
     </a>
   </div>
 </section>
-
-
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     // ----------------- TRIANGLE EDUCATION ANIMATION -----------------
