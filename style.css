@@ -13,81 +13,92 @@ html {
 }
 
 /* ==== NAVIGATION BAR ==== */
+/* Navbar Container */
+/* Navbar Styles */
+/* Navbar Styles */
+.logo-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #fff;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #0f172a; /* your bg color */
+  z-index: 999;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background-color: #0f172a;
-  position: sticky;
-  top: 0;
-  z-index: 999;
+  padding: 5px 25px;
 }
 
-.logo-container {
+.logo {
   display: flex;
   align-items: center;
   text-decoration: none;
-}
-
-.logo-image {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  margin-right: 10px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-}
-
-.logo-name {
-  font-size: 20px;
-  font-weight: bold;
   color: white;
+  font-weight: bold;
+  font-size: 20px;
 }
 
-.nav-menu {
+.logo-img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.nav-links {
   display: flex;
   gap: 20px;
   list-style: none;
 }
 
-.nav-link {
-  color: #94a3b8;
+.nav-links li a {
+  color: white;
   text-decoration: none;
   font-weight: 500;
-  position: relative;
+  transition: 0.3s;
 }
 
-.nav-link:hover,
-.nav-link.active {
-  color: #60a5fa;
+.nav-links li a:hover {
+  color: cyan;
 }
 
-.nav-link::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #38bdf8, #8b5cf6);
-  left: 0;
-  bottom: -4px;
-  transition: width 0.3s ease;
-}
-
-.nav-link:hover::after,
-.nav-link.active::after {
-  width: 100%;
-}
-
+/* Hamburger menu */
 .hamburger {
   display: none;
-  font-size: 1.8rem;
-  color: #fff;
+  font-size: 28px;
+  color: white;
   cursor: pointer;
 }
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #0b1120;
+    display: none;
+    padding: 20px 0;
+  }
+
+  .nav-links.nav-active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+
 
 /* ==== RESPONSIVE NAVIGATION ==== */
 @media (max-width: 768px) {
