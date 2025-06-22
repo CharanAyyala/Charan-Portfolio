@@ -162,6 +162,13 @@
   </style>
 </head>
 <body>
+  <div id="preloader">
+    <div class="loader-wrapper">
+      <img src="assets/spidey.png" alt="Charan Designs Logo" class="loader-logo" />
+      <h1 class="loader-text">Charan Designs</h1>
+    </div>
+  </div>
+
 
   <!-- Navigation Bar -->
  <!-- Fixed Header -->
@@ -744,6 +751,20 @@
       });
     });
   });
+
+<!-- loading animation -->
+window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+
+    // Wait 2.5 seconds, then fade out
+    setTimeout(() => {
+      preloader.style.opacity = '0';
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 800);
+    }, 2500); // Adjust delay here
+  });
+
 </script>
 
 
