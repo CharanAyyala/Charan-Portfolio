@@ -11,56 +11,104 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    .skills-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .hexagon {
-      width: 100px;
-      height: 55px;
-      background-color: #1e293b;
-      position: relative;
-      margin: 30px 10px;
-      transform: rotate(0deg);
-      transition: transform 0.8s ease-in-out;
-    }
-    .hexagon:hover {
-      transform: rotate(360deg);
-    }
-    .hexagon:before,
-    .hexagon:after {
-      content: "";
-      position: absolute;
-      width: 0;
-      border-left: 50px solid transparent;
-      border-right: 50px solid transparent;
-    }
-    .hexagon:before {
-      bottom: 100%;
-      border-bottom: 27.5px solid #1e293b;
-    }
-    .hexagon:after {
-      top: 100%;
-      border-top: 27.5px solid #1e293b;
-    }
-    .hexagon-content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-    }
-    .hexagon img {
-      width: 40px;
-      height: 40px;
-    }
-    .hex-caption {
-      text-align: center;
-      margin-top: 8px;
-      font-size: 0.9rem;
-      color: #cbd5e1;
-    }
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hexagon {
+  width: 90px;
+  height: 50px;
+  background-color: #1e293b;
+  position: relative;
+  margin: 20px 0;
+  transform: rotate(0deg);
+  transition: transform 0.8s ease-in-out;
+}
+
+.hexagon:hover {
+  transform: rotate(360deg);
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+}
+
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 25px solid #1e293b;
+}
+
+.hexagon:after {
+  top: 100%;
+  border-top: 25px solid #1e293b;
+}
+
+.hexagon-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.hexagon img {
+  width: 36px;
+  height: 36px;
+}
+
+.hex-caption {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 768px) {
+  .hexagon {
+    width: 80px;
+    height: 45px;
+  }
+
+  .hexagon:before,
+  .hexagon:after {
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+  }
+
+  .hexagon:before {
+    border-bottom: 22.5px solid #1e293b;
+  }
+
+  .hexagon:after {
+    border-top: 22.5px solid #1e293b;
+  }
+
+  .hexagon img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .hex-caption {
+    font-size: 0.8rem;
+  }
+}
+
     .project-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -372,52 +420,37 @@
 <!-- Experience Section -->
 <section id="experience" class="section experience-section">
   <h2 class="section-title">Experience</h2>
-  <div class="experience-carousel">
-    <div class="carousel-track">
-      <div class="timeline-card">
-        <div class="card-content">
+  <div class="experience-container">
+      <div class="experience-card">
           <h3>WebScrapping Intern</h3>
           <p class="experience-company">Navodita Infotech · 2024</p>
           <p class="experience-desc">Developed automated web scraping tasks using Python and delivered structured data pipelines.</p>
-        </div>
       </div>
-      <div class="timeline-card">
-        <div class="card-content">
+      <div class="experience-card">
           <h3>UI/UX Designer</h3>
           <p class="experience-company">MuseMate · Smart India Hackathon</p>
           <p class="experience-desc">Led UI design for a museum ticketing platform reducing crowd congestion with real-time analytics and smart booking flow.</p>
-        </div>
       </div>
-      <div class="timeline-card">
-        <div class="card-content">
+      <div class="experience-card">
           <h3>UI & Chatbot Developer</h3>
           <p class="experience-company">Shuriken LMS · 2025</p>
           <p class="experience-desc">UI designer and AI chatbot developer, implemented mock interview features using Figma, React, and Python.</p>
-        </div>
       </div>
-      <div class="timeline-card">
-        <div class="card-content">
+      <div class="experience-card">
           <h3>Web Developer Intern</h3>
           <p class="experience-company">CodSoft · 2024</p>
           <p class="experience-desc">Created multiple mini-projects including a calculator and responsive websites using HTML, CSS, and JavaScript.</p>
-        </div>
       </div>
-      <div class="timeline-card">
-        <div class="card-content">
+      <div class="experience-card">
           <h3>Data Analyst</h3>
           <p class="experience-company">AICTE Power BI Project</p>
           <p class="experience-desc">Analyzed energy consumption trends using Power BI, providing insights through interactive dashboards and visual reports.</p>
-        </div>
       </div>
-      <div class="timeline-card">
-        <div class="card-content">
+      <div class="experience-card">
           <h3>UI Designer & Strategist</h3>
           <p class="experience-company">Team Foresighters · 2025</p>
           <p class="experience-desc">Designed UI and disaster mitigation features for a smart alert system. Helped develop post-disaster suggestions and safety routing tools.</p>
-        </div>
       </div>
-    </div>
-    <div class="carousel-dots" id="carouselDots"></div>
   </div>
 </section>
 
@@ -426,58 +459,146 @@
 
 <section id="testimonials">
   <h2 class="section-title"><b>Testimonials</b></h2>
-  <div class="testimonials-container">
+  <div class="testimonials-wrapper">
+    <div class="testimonials-track">
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <div class="testimonial-header">
+            <img src="https://api.dicebear.com/8.x/bottts/svg?seed=Sripathi" alt="K. Sripathi Rao">
+            <h4>K. Sripathi Rao</h4>
+          </div>
+          <p>"Charan is a visionary developer. Always pushing boundaries!"</p>
+        </div>
+      </div>
 
-    <!-- Card 1 -->
-    <div class="testimonial-card">
-      <img src="https://api.dicebear.com/8.x/bottts/svg?seed=Sripathi" alt="K. Sripathi Rao">
-      <h4>K. Sripathi Rao</h4>
-      <p>"Charan is a visionary developer. Always pushing boundaries!"</p>
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <div class="testimonial-header">
+            <img src="https://api.dicebear.com/8.x/bottts/svg?seed=Revanth" alt="B. Revanth">
+            <h4>B. Revanth</h4>
+          </div>
+          <p>"His UI sense is top-notch. Pleasure to collaborate with him."</p>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <div class="testimonial-header">
+            <img src="https://api.dicebear.com/8.x/bottts/svg?seed=Lohith" alt="D. Lohith Sai">
+            <h4>D. Lohith Sai</h4>
+          </div>
+          <p>"Creative, fast, and reliable. Charan makes any idea real."</p>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <div class="testimonial-header">
+            <img src="https://api.dicebear.com/8.x/bottts/svg?seed=Hitesh" alt="N. Surya Hitesh">
+            <h4>N. Surya Hitesh</h4>
+          </div>
+          <p>"Charan's passion for design and frontend work is unmatched."</p>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <div class="testimonial-header">
+            <img src="https://api.dicebear.com/8.x/bottts/svg?seed=Jagadeesh" alt="K. Jagadeesh">
+            <h4>K. Jagadeesh</h4>
+          </div>
+          <p>"One of the most dedicated people I've worked with."</p>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <div class="testimonial-header">
+            <img src="https://api.dicebear.com/8.x/bottts/svg?seed=Venkatesh" alt="V. Venkateswara Rao">
+            <h4>V. Venkateswara Rao</h4>
+          </div>
+          <p>"Charan's UI design skills are exceptional. His creativity is top-tier."</p>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <div class="testimonial-header">
+            <img src="https://api.dicebear.com/8.x/bottts/svg?seed=Sripathi" alt="K. Sripathi Rao">
+            <h4>K. Sripathi Rao</h4>
+          </div>
+          <p>"Charan is a visionary developer. Always pushing boundaries!"</p>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <div class="testimonial-header">
+            <img src="https://api.dicebear.com/8.x/bottts/svg?seed=Revanth" alt="B. Revanth">
+            <h4>B. Revanth</h4>
+          </div>
+          <p>"His UI sense is top-notch. Pleasure to collaborate with him."</p>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <div class="testimonial-header">
+            <img src="https://api.dicebear.com/8.x/bottts/svg?seed=Lohith" alt="D. Lohith Sai">
+            <h4>D. Lohith Sai</h4>
+          </div>
+          <p>"Creative, fast, and reliable. Charan makes any idea real."</p>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <div class="testimonial-header">
+            <img src="https://api.dicebear.com/8.x/bottts/svg?seed=Hitesh" alt="N. Surya Hitesh">
+            <h4>N. Surya Hitesh</h4>
+          </div>
+          <p>"Charan's passion for design and frontend work is unmatched."</p>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <div class="testimonial-header">
+            <img src="https://api.dicebear.com/8.x/bottts/svg?seed=Jagadeesh" alt="K. Jagadeesh">
+            <h4>K. Jagadeesh</h4>
+          </div>
+          <p>"One of the most dedicated people I've worked with."</p>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <div class="testimonial-header">
+            <img src="https://api.dicebear.com/8.x/bottts/svg?seed=Venkatesh" alt="V. Venkateswara Rao">
+            <h4>V. Venkateswara Rao</h4>
+          </div>
+          <p>"Charan's UI design skills are exceptional. His creativity is top-tier."</p>
+        </div>
+      </div>
+
     </div>
-
-    <!-- Card 2 -->
-    <div class="testimonial-card">
-      <img src="https://api.dicebear.com/8.x/bottts/svg?seed=Revanth" alt="B. Revanth">
-      <h4>B. Revanth</h4>
-      <p>"His UI sense is top-notch. Pleasure to collaborate with him."</p>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="testimonial-card">
-      <img src="https://api.dicebear.com/8.x/bottts/svg?seed=Lohith" alt="D. Lohith Sai">
-      <h4>D. Lohith Sai</h4>
-      <p>"Creative, fast, and reliable. Charan makes any idea real."</p>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="testimonial-card">
-      <img src="https://api.dicebear.com/8.x/bottts/svg?seed=Hitesh" alt="N. Surya Hitesh">
-      <h4>N. Surya Hitesh</h4>
-      <p>"Charan's passion for design and frontend work is unmatched."</p>
-    </div>
-
-    <!-- Card 5 -->
-    <div class="testimonial-card">
-      <img src="https://api.dicebear.com/8.x/bottts/svg?seed=Jagadeesh" alt="K. Jagadeesh">
-      <h4>K. Jagadeesh</h4>
-      <p>"One of the most dedicated people I’ve worked with."</p>
-    </div>
-
-    <!-- Card 6 -->
-    <div class="testimonial-card">
-      <img src="https://api.dicebear.com/8.x/bottts/svg?seed=Venkatesh" alt="V. Venkateswara Rao">
-      <h4>V. Venkateswara Rao</h4>
-      <p>"Charan’s UI design skills are exceptional. His creativity is top-tier."</p>
-    </div>
-
   </div>
 </section>
 
 
 
 
-  <!-- Footer -->
-<footer>
+<!-- Contact CTA Section -->
+<section class="contact-card-container">
+  <div class="contact-card">
+    <div class="contact-text">
+      <h2>Let's create something amazing together.</h2>
+      <p>Ready to bring your next project to life? Let's connect and discuss how I can help you achieve your goals.</p>
+    </div>
+    <div class="contact-action">
+      <a href="mailto:charanahn2427@gmail.com" class="contact-btn">Contact Me</a>
+    </div>
+  </div>
+
   <div class="social-icons">
     <a href="https://github.com/CharanAyyala" target="_blank" aria-label="GitHub">
       <i class="fab fa-github"></i>
@@ -485,11 +606,12 @@
     <a href="https://linkedin.com/in/hari-ayyala-99aa342b0" target="_blank" aria-label="LinkedIn">
       <i class="fab fa-linkedin"></i>
     </a>
-    <a href="mailto:charanahn2427@gmail.com" aria-label="Email">
-      <i class="fas fa-envelope"></i>
+    <a href="https://instagram.com/" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
     </a>
   </div>
-</footer>
+</section>
+
 
 <script>
   // ----------------- TRIANGLE EDUCATION ANIMATION -----------------
@@ -514,60 +636,94 @@
   }
 
   // ----------------- EXPERIENCE CAROUSEL -----------------
-let currentIndex = 0;
-let autoSlideInterval;
-const slideDuration = 4000;
+  let currentIndex = 0;
+        let autoSlideInterval;
+        const slideDuration = 4000;
 
-function updateDots() {
-  const dots = document.querySelectorAll('#carouselDots span');
-  dots.forEach((dot, idx) => {
-    dot.classList.toggle('active', idx === currentIndex);
+        function updateDots() {
+            const dots = document.querySelectorAll('#carouselDots span');
+            dots.forEach((dot, idx) => {
+                dot.classList.toggle('active', idx === currentIndex);
+            });
+        }
+
+        function createDots() {
+            const cards = document.querySelectorAll('.testimonial-card');
+            const dotsContainer = document.getElementById('carouselDots');
+            dotsContainer.innerHTML = '';
+
+            cards.forEach((_, index) => {
+                const dot = document.createElement('span');
+                dot.addEventListener('click', () => moveToSlide(index));
+                dotsContainer.appendChild(dot);
+            });
+
+            updateDots();
+        }
+
+        function moveToSlide(index) {
+            const track = document.querySelector('.testimonials-track');
+            const cardWidth = document.querySelector('.testimonial-card').offsetWidth + 40;
+            const cards = document.querySelectorAll('.testimonial-card');
+            const maxIndex = cards.length - 1;
+
+            currentIndex = (index + cards.length) % cards.length;
+            track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+            updateDots();
+        }
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+                moveToSlide(currentIndex + 1);
+            }, slideDuration);
+        }
+
+        function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            createDots();
+            startAutoSlide();
+
+            const carousel = document.querySelector('.testimonials-carousel');
+            carousel.addEventListener('mouseenter', stopAutoSlide);
+            carousel.addEventListener('mouseleave', startAutoSlide);
+        });
+  // Get hamburger and nav menu
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+
+  // Toggle menu visibility
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('nav-active');
   });
-}
 
-function createDots() {
-  const cards = document.querySelectorAll('.timeline-card');
-  const dotsContainer = document.getElementById('carouselDots');
-  dotsContainer.innerHTML = '';
-
-  cards.forEach((_, index) => {
-    const dot = document.createElement('span');
-    dot.addEventListener('click', () => moveToSlide(index));
-    dotsContainer.appendChild(dot);
+  // Close menu when a nav-link is clicked (on mobile)
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('nav-active');
+    });
   });
 
-  updateDots();
-}
+  // Optional: Smooth scroll for all nav links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
 
-function moveToSlide(index) {
-  const track = document.querySelector('.carousel-track');
-  const cardWidth = document.querySelector('.timeline-card').offsetWidth + 40;
-  const cards = document.querySelectorAll('.timeline-card');
-  const maxIndex = cards.length - 1;
-
-  currentIndex = (index + cards.length) % cards.length;
-  track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-  updateDots();
-}
-
-function startAutoSlide() {
-  autoSlideInterval = setInterval(() => {
-    moveToSlide(currentIndex + 1);
-  }, slideDuration);
-}
-
-function stopAutoSlide() {
-  clearInterval(autoSlideInterval);
-}
-
-window.addEventListener('DOMContentLoaded', () => {
-  createDots();
-  startAutoSlide();
-
-  const carousel = document.querySelector('.experience-carousel');
-  carousel.addEventListener('mouseenter', stopAutoSlide);
-  carousel.addEventListener('mouseleave', startAutoSlide);
-});
+  const track = document.querySelector('.testimonials-track');
+  if (track) {
+    track.innerHTML += track.innerHTML; // Duplicate testimonials for seamless scroll
+  }
 
   </script>
 
